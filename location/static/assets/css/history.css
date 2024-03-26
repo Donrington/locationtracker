@@ -1,0 +1,82 @@
+.location-history {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.location-history th, .location:root {
+    /* Default theme colors (light theme) */
+    --bg-color: #ffffff; /* Light background */
+    --text-color: #000000; /* Dark text */
+    --accent-color: #8a1420; /* Accent color for headers, etc. */
+}
+
+.dark-theme {
+    /* Dark theme colors */
+    --bg-color: #363537; /* Dark background */
+    --text-color: #FAFAFA; /* Light text */
+    --accent-color: #8a1420; /* Adjust if you want a different accent color in dark mode */
+}
+
+.location-history {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.location-history th, .location-history td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.location-history th {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.location-history tr:hover {
+    background-color: #f5f5f5;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.btn-outline-dark, .btn-outline-danger {
+    margin-right: 5px;
+}
+
+.btn-outline-dark:hover, .btn-outline-danger:hover {
+    opacity: 0.7;
+}
+-history td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd; /* Light line between rows */
+}
+
+.location-history th{
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.location-history tr:hover {
+    background-color: #f5f5f5; /* Highlight row on hover */
+}
+
+.table-responsive {
+    overflow-x: auto; /* Makes the table scrollable horizontally */
+}
+
+.btn-outline-dark, .btn-outline-danger {
+    margin-right: 5px;
+}
+
+.btn-outline-dark:hover, .btn-outline-danger:hover {
+    opacity: 0.7;
+}

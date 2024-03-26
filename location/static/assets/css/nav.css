@@ -1,0 +1,152 @@
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #343a40;
+    --accent-color: #495057;
+}
+
+/* Global font setting */
+* {
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Specific styles for navigation links, headings, and paragraphs */
+h1, p {
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-weight: 500 !important;
+    font-size: 1.3em;
+    font-style: normal;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--bg-color) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.nav-link {
+    color: var(--accent-color) !important;
+}
+
+
+
+.navbar-toggler {
+    border-color: var(--accent-color) !important;
+}
+
+.btn-outline-dark {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+    height: 200px; /* Example fixed height */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0,0,0,.2);
+}
+
+.card-body {
+    flex: 1;
+    overflow: auto; /* Enables scrolling for overflowing content */
+}
+
+/* Responsive adjustments and animations */
+@media (min-width: 768px) {
+    .navbar-nav .nav-link {
+        padding-right: .7rem;
+        padding-left: .7rem;
+    }
+}
+
+.fa-bars, .fa-moon {
+    transition: transform .3s ease;
+}
+
+.btn:focus .fa-moon, .btn:hover .fa-moon {
+    transform: rotate(-30deg);
+}
+
+.btn:focus .fa-bars, .btn:hover .fa-bars {
+    transform: rotate(90deg);
+}
+
+
+
+/* Dark theme styles */
+.dark-theme {
+    --bg-color: #343a40;
+    --text-color: #f8f9fa;
+    --accent-color: #adb5bd;
+}
+
+.dark-theme .navbar {
+    background-color: var(--bg-color) !important;
+}
+
+.dark-theme .nav-link, .dark-theme .navbar-toggler {
+    color: var(--text-color) !important;
+}
+
+.dark-theme .btn-outline-dark {
+    border-color: var(--text-color);
+    color: var(--text-color);
+}
+
+.dark-theme .btn-outline-dark:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.dark-theme .card {
+    background-color: #495057;
+    color: #f8f9fa;
+}
+
+/* Adjust the navbar-toggler icon color for dark theme */
+.dark-theme .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Enhance the toggle button for theme switch */
+.dark-theme .fa-moon {
+    display: none;
+}
+
+.dark-theme .fa-sun {
+    display: inline-block;
+}
+
+/* Light Theme NavLink Hover */
+.nav-link:hover {
+    color:  rgb(151, 0, 0)!important; /* This will make the hover color red in the light theme */
+}
+
+/* Dark Theme NavLink Hover */
+.dark-theme .nav-link:hover {
+    color: rgb(151, 0, 0)!important; /* This ensures the hover color is also red in the dark theme */
+}
+
+/* Initially hide the sun icon until dark mode is activated */
+.fa-sun {
+    display: none;
+}

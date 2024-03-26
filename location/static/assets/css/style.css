@@ -1,0 +1,720 @@
+*{
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav{
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500 !important;
+  font-size: 1.5em;
+  font-style: normal;
+}
+
+h1{
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700 !important;
+  font-style: normal;
+  font-size: 1.5em;
+  color: #8c1a26;
+}
+  
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+}
+
+.carousel-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-background img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.carousel-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-content {
+  text-align: center;
+  color: white;
+}
+
+/* Linear gradient overlay */
+.carousel-background::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 1;
+}
+
+/* Ensure the text appears above the gradient overlay */
+.carousel-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+  
+/* ... existing styles ... */
+
+/* Navigation Bar */
+
+.navbar-nav a:hover{
+  color: #831d27 ;
+}
+
+.navbar-nav a{
+  padding: 20px !important;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #dc3545; /* Custom brand color */
+  }
+  
+  
+  /* Additional styles */
+  
+  /* Initial Navbar Style */
+/* ... existing styles ... */
+
+/* Navbar Scroll Effect */
+/* Default Navbar Style */
+.navbar {
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.navbar .nav-link, .navbar .navbar-brand {
+  color: white; /* White text color initially */
+  transition: color 0.3s; /* Smooth transition for text color */
+}
+
+/* Style changes when navbar is scrolled */
+.navbar.scrolled {
+  background-color: white !important; /* White background when scrolled */
+}
+
+.navbar.scrolled .nav-link, .navbar.scrolled .navbar-brand {
+  color: black; /* Black text when navbar is scrolled */
+}
+
+/* Hover effects */
+.navbar-nav .nav-link:hover {
+  color: #c10e20; /* Crimson color on hover, adjust if needed */
+}
+
+/* Active link style */
+.navbar-nav .nav-link.active {
+  color: #e4162b !important; /* Ensure crimson color for active state */
+}
+
+/* Hover effect on scrolled navbar should not override active state */
+.navbar.scrolled .nav-link:hover, .navbar.scrolled .nav-link.active {
+  color: #c51425 !important; /* Maintain crimson color for active/hover state when scrolled */
+}
+
+/* Additional styles */
+.navbar-nav .nav-link {
+  padding: 20px;
+}
+
+/* ... existing styles ... */
+
+/* Navbar login and signup links */
+.login-link, .signup-link {
+  font-weight: bold;
+  padding-left: 1em; /* Space out the login/signup from other links */
+}
+
+.signup-link {
+  color: #dc3545; /* Your brand's color for the signup link */
+  margin-left: 1em; /* Add space between login and signup */
+}
+
+/* Hover effects for login/signup */
+.login-link:hover, .signup-link:hover {
+  color: #831d27; /* Darker shade for hover effect */
+  text-decoration: none; /* No underline on hover */
+}
+
+/* On mobile, adjust navbar-toggler for better spacing */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1); /* Lighten the border */
+}
+
+/* When navbar is expanded on mobile, style the login/signup differently if needed */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background for mobile navbar */
+  }
+
+  .login-link, .signup-link {
+    display: block; /* Stack the login/signup links */
+    color: white; /* Keep them white like other nav links */
+    padding: 0.5em 1em; /* Padding for touch targets */
+  }
+}
+
+
+/* Get Started Button */
+.get-started-btn {
+  font-weight: 600;
+  padding: 1rem 2rem;
+  background-color: transparent !; /* Transparent background */
+  color: white; /* White text color */
+  border: 1px solid white; /* White border */
+  margin-top: 2rem;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.get-started-btn:hover {
+  background-color: white; /* White background on hover */
+  color: black; /* Black text on hover */
+  text-decoration: none; /* No underline on hover */
+}
+
+/* Additional media query adjustments may be needed depending on your design */
+
+
+
+/* ... existing styles ... */
+
+/* About Section */
+.about-section {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #dc3545;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 48%;
+  width: 40px;
+  height: 4px;
+  background-color: #8c1a26;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.about-content {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Sophisticated animations */
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-subtitle {
+    font-size: 20px;
+  }
+
+  .about-content {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+/* Features Section */
+.features-section {
+  background-color: #fff;
+  color: #333;
+  padding: 80px 0; /* Increased padding for more space */
+}
+
+.features-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem; /* Increased margin for more space */
+}
+
+.feature-icon {
+  font-size: 4rem; /* Larger size for icons */
+  color: #dc3545;
+  margin-bottom: 1rem; /* Space below icons */
+}
+
+.feature-item {
+  padding: 1rem; /* Padding around each feature item */
+}
+
+.feature-item-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem; /* Space above title */
+}
+
+.feature-item-description {
+  font-size: 1rem;
+  margin-bottom: 2rem; /* Increased margin for more space below text */
+}
+
+.feature-read-more {
+  border: 1px solid #dc3545;
+  color: #831d27;
+  padding: 0.75rem 1.5rem; /* Larger padding for a wider button */
+  transition: all 0.3s ease;
+  border-radius: 0; /* Remove rounded corners */
+  overflow: hidden;
+  position: relative;
+}
+
+.feature-read-more:hover {
+  background-color: #831d27; /* Fill color on hover */
+  color: #fff; /* Text color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .features-title {
+    font-size: 2rem;
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+  }
+
+  .feature-item-title {
+    font-size: 1.25rem;
+  }
+
+  .feature-item-description {
+    font-size: 0.9rem;
+  }
+
+  .feature-read-more {
+    padding: 0.5rem 1rem; /* Smaller padding for smaller screens */
+  }
+
+  
+}
+@media (max-width: 500px) {
+  .feature-box {
+    /* Adjust the width to be 100% minus the total padding on the left and right */
+    width: calc(100% - 40px); /* Assuming 20px padding on each side */
+    margin: auto; /* This will center the box if it's less than 100% */
+    height: 300px; /* Adjust height as content may be more */
+  }
+
+  .feature-icon {
+    /* You might want to adjust the icon size on very small screens */
+    font-size: 2.5rem;
+  }
+
+  /* You may want to adjust other styles for smaller screens as well */
+}
+
+.txt{
+  font-size: 1.2rem;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Spacing between boxes */
+}
+
+.feature-box {
+  border: 1px solid #595959;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  height: 300px; /* Fixed height to accommodate content and icon movement */
+  width:350px;
+}
+
+.icon-container {
+  position: absolute;
+  top: 30%; /* Adjust based on preference */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: top 0.5s ease;
+}
+
+.feature-icon {
+  font-size: 70px;
+  color: #333;
+  transition: color 0.5s ease;
+}
+
+.content-container {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  width: 100%; /* Ensure the content does not overflow the box */
+  text-align: center;
+}
+
+.feature-box:hover .content-container {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.feature-box:hover .icon-container {
+  top: 0%; /* Move icon to the top on hover */
+}
+
+.feature-box:hover .feature-icon {
+  color: crimson;
+}
+
+.feature-title, .feature-description {
+  margin: 5px 0;
+}
+
+/*section for the benefit*/
+.benefits-section {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.benefit {
+  margin: 1rem 0;
+}
+
+.percentage {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #dc3545;
+}
+
+.benefit-description {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+
+
+/*SECTION FOR THE ANDROID AND IOS ICON*/
+
+.download-section {
+  padding: 50px 0;
+  /* Adding a linear gradient on top of the background image */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('../img/a.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  position: relative; /* Ensures the content is on top of the background */
+}
+.download-section h2, .download-section p {
+  margin-bottom: 20px;
+}
+
+.download-btn {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  margin: 0 5px;
+  padding: 10px 50px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0; /* This removes the rounded edges */
+}
+
+
+.download-btn i {
+  margin-right: 8px;
+}
+
+.ios-btn:hover, .android-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* For sophisticated hover effect */
+.download-btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: crimson;
+  z-index: -1;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 0; /* Ensure the hover effect also has no rounded edges */
+}
+
+.download-btn:hover::after {
+  transform: scaleX(1);
+}
+
+
+/*SECTION FOR THE CLIENT TESTIMONIAL*/
+.testimonial-section {
+  background-color: #dddddd;
+  padding: 60px 0;
+}
+
+.section-title {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.client-image img {
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  border-radius: 50%; /* Circular image */
+  object-fit: cover; /* Ensure image covers the area without distorting */
+  margin-bottom: 20px; /* Space between image and testimonial text */
+  border: 3px solid #75111b; /* Optional: Adds a border color matching your design */
+}
+
+.testimonial {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  margin: 20px;
+  text-align: center; /* Ensures text and image are centered */
+  position: relative;
+}
+
+.testimonial-content {
+  font-size: 18px;
+  font-style: italic;
+  color: #555;
+}
+
+.client-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Swiper specific styling */
+.swiper {
+  width: calc(100% - 40px); /* Adjust width to account for padding */
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 600px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  background: #545454;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #8a1420 !important;
+}
+
+
+
+
+
+/*section for partners*/
+
+
+.partner-logos {
+  overflow: hidden;
+  padding-top: 30px;
+}
+
+.partner-logos .swiper-container {
+  width: 30%;
+  padding-top: 70px;
+}
+
+.partner-logos .swiper-slide { /* Corrected class name from swiper-slider to swiper-slide */
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0000003e; /* 1px border as per design */
+}
+
+ .partner-logos .swiper-slide img {
+  display: block;
+  width: 150px; /* Adjusted for consistent width */
+  height: 75px; /* Adjusted for consistent height */
+  object-fit: contain;
+  margin: 10px; /* Added margin inside the border */
+}
+
+/*section for the contact us and footer*/
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  color: #8a1420; /* Custom color for icons */
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.map-container iframe {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+/* Styling adjustments for form inputs */
+/* Styling adjustments for form inputs */
+.form-control, .form-select {
+  margin-bottom: 1rem; /* Spacing between form fields */
+  border-radius: 0; /* Removes rounded corners */
+}
+
+/* Adjust button style to remove rounded corners */
+.btn-primary {
+  background-color: #8a1420; /* Custom button color */
+  border: none;
+  padding: 10px 20px; /* Button padding */
+  border-radius: 0; /* Removes rounded corners */
+}
+
+/* Additional styling for the form and other elements if needed */
+
+
+.footer {
+  background-color: #222;
+  color: #ddd;
+}
+
+.footer p {
+  margin-bottom: 0.5rem;
+}
+
+#iconfooter{
+  width:12px;
+   height:12px;
+}
+
+
+
+.footer .footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .footer-link:hover {
+  color: #8a1420; /* Color change on hover */
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  border: 1px solid #fff; /* Rounded border */
+  border-radius: 50%; /* Makes icons rounded */
+  padding: 10px; /* Adjust padding to change the size */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+
+.social-icon:hover {
+  color: #000;
+  background-color: #fff; /* Background color on hover */
+}
+
+/* Additional responsiveness for text alignment */
+@media (max-width: 767px) {
+  .footer .container {
+    text-align: center;
+  }
+  .footer .social-icons {
+    margin-top: 20px;
+  }
+}
+
+
+

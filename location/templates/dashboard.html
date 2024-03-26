@@ -1,0 +1,112 @@
+{%extends 'dashlayout.html'%}
+
+{%block content%}
+
+<div class="container-fluid">
+    <h2 class="mt-4 mb-4">Welcome, <span id="username">{{ user.username }}</span></h1>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card bg-secondary text-white mb-3">
+                <div class="card-header">Total Locations Tracked</div>
+                <div class="card-body the">
+                    <h5 class="card-title">{{ total_locations }}</h5>
+                    
+                    <p class="card-text">Tracking locations across the globe.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-header">Active Tracking</div>
+                <div class="card-body">
+                    <h5 class="card-title" id="lastLocation">{{ last_address }}</h5>
+                    <p class="card-text">Your tracking is currently active and monitoring.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header">Last Location</div>
+                <div class="card-body">
+                    <h5 class="card-title">{{last_location}}</h5>
+                    <p class="card-text">The most recent location tracked by your device.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-container my-4 d-flex justify-content-center">
+        <div class="input-group mb-3" style="max-width: 600px;"> <!-- Adjust max-width as needed -->
+            <input id="searchInput" type="text" class="form-control" placeholder="Enter a location" aria-label="Location" aria-describedby="button-addon2">
+            <button class="btn btn-outline-danger" type="button" id="button-addon2" onclick="searchLocation()">Search</button>
+        </div>
+    </div>
+    
+    <div class="map-container my-4">
+        <h2 class="pb-4">Current Location</h2>
+        <div class="map-placeholder bg-secondary" id="liveMap"  style="height: 300px;">
+            <!-- Ideally, integrate a dynamic map here. Placeholder for now. -->
+            Map API Integration Placeholder
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+{%endblock%}
+
+{% block extra_js %}
+<script>
+let map;
+let userMarker;
+const csrf_token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById('liveMap'), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 6
+    });
+    userMarker = new google.maps.Marker({ map: map });
+}
+
+function searchLocation() {
+    let input = document.getElementById('searchInput').value;
+    let geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({ 'address': input }, function(results, status) {
+        if (status === 'OK') {
+            // Extract latitude and longitude and send them to the Flask backend
+            const latitude = results[0].geometry.location.lat();
+            const longitude = results[0].geometry.location.lng();
+
+            fetch('/location', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrf_token 
+                },
+                body: JSON.stringify({ latitude: latitude, longitude: longitude })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Update the map and last location text with the address returned from the server
+                map.setCenter(results[0].geometry.location);
+                userMarker.setPosition(results[0].geometry.location);
+                document.getElementById('lastLocation').textContent = data.address;
+            })
+            .catch(error => console.error('Error:', error));
+        } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+        }
+    });
+}
+
+// Load the Google Maps JavaScript API
+let script = document.createElement('script');
+script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCixKR38tt6oXTonDdByW-4oVKVe9mULIM&callback=initMap`;
+script.async = true;
+script.defer = true;
+document.head.appendChild(script);
+</script>
+
+{% endblock %}
+

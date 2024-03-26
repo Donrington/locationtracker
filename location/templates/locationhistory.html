@@ -1,0 +1,73 @@
+{% extends 'dashlayout.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Location History</h2>
+    <div class="table-responsive">
+        <table class="table location-history display dt-datetime" id="myTable">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Device</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for loc in locations %}
+                <tr>
+                    <td>{{ loc.timestamp.strftime('%Y-%m-%d') }}</td>
+                    <td>{{ loc.latitude }}, {{ loc.longitude }}</td>
+                    <td>Device info</td> <!-- Assuming you'll add device info in the future -->
+                    <td>{{ loc.timestamp.strftime('%H:%M') }}</td>
+                    <td>
+                        
+                        <button onclick="deleteLocation`({{ loc.id }})`" class="btn btn-sm btn-outline-danger">Delete</button>
+
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+   
+<script>
+    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+    
+    function deleteLocation(locationId) {
+        if (confirm('Are you sure you want to delete this location?')) {
+            fetch(`/delete-location/${locationId}`, { // Correct URL formation
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrfToken, // Make sure csrfToken is correctly defined
+                    'Content-Type': 'application/json'
+                    // Note: 'X-CSRFToken' header may need to match server-side settings
+                },
+                body: JSON.stringify({ locationId: locationId }) // This is not needed if you're just sending locationId
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok, status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Handle the response data, refresh the page, or remove the table row
+                console.log('Location deleted:', data);
+                window.location.reload(); // Refresh page to show the update
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    }
+    
+    
+    
+    </script>
+    
+{% endblock %}

@@ -1,0 +1,458 @@
+{%extends "layout.html"%}
+
+{%block banner%}
+
+  <!-- Hero Section -->
+<!-- Hero Section -->
+<header>
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <!-- More indicators for additional slides -->
+    </div>
+
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="carousel-background"><img src="../static/assets/img/r2.jpg" alt="Slide 1"></div>
+        <div class="carousel-container">
+          <div class="carousel-content text-center">
+            <h1 class="text-white display-1 animate__animated animate__fadeInDown">GPS TRACKING SERVICES</h1>
+            <!-- Get Started Button -->
+            <a href="{{url_for('login')}}" class="btn btn-primary btn-lg get-started-btn animate__animated animate__fadeInUp">Get Started</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-background"><img src="../static/assets/img/b.jpg" alt="Slide 2"></div>
+        <div class="carousel-container">
+          <div class="carousel-content text-center">
+            <h1 class="text-white display-1 animate__animated animate__fadeInDown">RELIABLE & ACCURATE</h1>
+            <!-- Get Started Button -->
+            <a href="{{url_for('login')}}" class="btn btn-primary btn-lg get-started-btn animate__animated animate__fadeInUp">Get Started</a>
+          </div>
+        </div>
+      </div>
+      <!-- Additional carousel items for more slides -->
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</header>
+
+{%endblock banner%}
+
+
+{%block content%}
+
+  <section class="about-section pt-5 pb-5" id="about">
+    <div class="container">
+      <div class="row align-items-center ">
+        <div class="mb-5 mt-5">
+          <h2 class="section-title text-center" >ABOUT</h2>
+        </div>
+        <!-- Image Column -->
+        <div class="col-lg-6 mb-3 mb-lg-0">
+          <img src="../static/assets/img/p2.jpg" alt="Descriptive Alt Text" class="img-fluid">
+        </div>
+        
+        <!-- Text Content Column -->
+        <div class="col-lg-6">
+          
+          <p class="section-subtitle" >WHO WE ARE ?</p>
+          <div class="about-content">
+            <p>GPS Tech Solutions has been a pioneer in providing sophisticated GPS tracking and fleet management solutions. With a focus on innovation and quality, we deliver systems that offer real-time, actionable data to businesses and individuals alike.</p>
+            <p>Our comprehensive tracking services are designed to enhance operational efficiency, ensure security, and improve overall asset management. Trust in our technology to provide the insights and oversight necessary for your peace of mind.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section py-5 text-center" id="features">
+    <div class="container">
+      <div class="mb-5 mt-5">
+      <h2 class="section-title" >FEATURES</h2>
+      <p class="txt">Explore the wide range of capabilities our GPS tracking services offer to ensure your peace of mind.</p>
+    </div>
+      <div class="row">
+        <!-- Feature Item 1 -->
+        
+        <div class="col-md-4 mb-5">
+          <i class="fas fa-car-crash feature-icon feature-item"></i>
+          <h3 class="feature-item-title">IGNITION STATUS</h3>
+          <p class="feature-item-description">Monitor vehicle ignition status in real-time for enhanced security and efficient fleet management.</p>
+          <button class="btn btn-outline-danger feature-read-more">Read More</button>
+        </div>
+
+
+
+        
+        <!-- Feature Item 2 -->
+        <div class="col-md-4 mb-5">
+          <i class="fas fa-route feature-icon feature-item"></i>
+          <h3 class="feature-item-title">ROUTE HISTORY</h3>
+          <p class="feature-item-description">Review the routes taken with detailed reports and actionable insights for performance improvement.</p>
+          <button class="btn btn-outline-danger feature-read-more">Read More</button>
+        </div>
+        
+        <!-- Feature Item 3 -->
+        <div class="col-md-4 mb-5">
+          <i class="fas fa-map-marked-alt feature-icon feature-item"></i>
+          <h3 class="feature-item-title">GEO-FENCING</h3>
+          <p class="feature-item-description">Set geographical boundaries and receive alerts whenever your vehicle enters or leaves designated areas.</p>
+          <button class="btn btn-outline-danger feature-read-more">Read More</button>
+        </div>
+
+
+           <!-- Feature Item 4 -->
+      <div class="col-md-4 mb-5">
+        <i class="fas fa-broadcast-tower feature-icon feature-item"></i>
+        <h3 class="feature-item-title">LIVE TRACKING</h3>
+        <p class="feature-item-description">Experience real-time tracking of your fleet with high accuracy and minimal latency for operational efficiency.</p>
+        <button class="btn btn-outline-danger feature-read-more">Read More</button>
+      </div>
+
+      <!-- Feature Item 5 -->
+      <div class="col-md-4 mb-5">
+        <i class="fas fa-chart-line feature-icon feature-item"></i>
+        <h3 class="feature-item-title">ANALYTICS & REPORTS</h3>
+        <p class="feature-item-description">Gain valuable insights with advanced analytics on fleet performance, including mileage, idle times, and fuel consumption.</p>
+        <button class="btn btn-outline-danger feature-read-more">Read More</button>
+      </div>
+
+      <!-- Feature Item 6 -->
+      <div class="col-md-4 mb-5">
+        <i class="fas fa-shield-alt feature-icon feature-item"></i>
+        <h3 class="feature-item-title">SAFETY MANAGEMENT</h3>
+        <p class="feature-item-description">Enhance the safety of your fleet with speed monitoring, driver behavior analysis, and instant accident notifications.</p>
+        <button class="btn btn-outline-danger feature-read-more">Read More</button>
+      </div>
+      
+    
+
+
+      </div>
+    </div>
+  </section>
+
+ <section class="testimonial-section pt-5 pb-5" id="products">
+ <div>
+  <div class="mb-5 mt-5">
+   <h2 class="section-title  text-center" >OUR PRODUCTS</h2>
+   <p class=" text-center txt pb-4">Our innovative products are designed to provide comprehensive tracking solutions for individuals and businesses alike.</p>
+   </div>
+
+  <div class="features-container my-5 mx-5">
+    <div class="feature-box">
+      <div class="icon-container">
+        <i class="fas fa-map-marker-alt feature-icon"></i> <!-- Location Tracking -->
+        <h5 class="feature-title">REAL-TIME TRACKING</h5>
+      </div>
+      <div class="content-container">
+        
+        <p class="feature-description">Track your assets in real-time globally with precise location updates.</p>
+      </div>
+    </div>
+    <div class="feature-box">
+      <div class="icon-container">
+        <i class="fas fa-route feature-icon"></i> <!-- Route History -->
+        <h5 class="feature-title">ROUTE HISTORY</h5>
+      </div>
+      <div class="content-container">
+        
+        <p class="feature-description">Review historical route data to optimize your operations and reduce costs.</p>
+      </div>
+    </div>
+    <div class="feature-box">
+      <div class="icon-container">
+        <i class="fas fa-bell feature-icon"></i> <!-- Alerts & Notifications -->
+        <h5 class="feature-title">ALERTS & NOTIFICATIONS</h5>
+      </div>
+      <div class="content-container">
+        
+        <p class="feature-description">Get instant alerts for important events like geofence breaches, speed alerts, and more.</p>
+      </div>
+    </div>
+<!-- 
+       New Product Feature 3
+       <div class="feature-box">
+        <div class="icon-container">
+          <i class="fas fa-users feature-icon"></i> 
+          <h5 class="feature-title">FLEET MANAGEMENT</h5>
+        </div>
+        <div class="content-container">
+          <p class="feature-description">Manage your entire fleet efficiently with our comprehensive fleet management platform, tailored to scale with your business.</p>
+        </div>
+      </div> -->
+  
+      <!-- New Product Feature 4 -->
+      <div class="feature-box">
+        <div class="icon-container">
+          <i class="fas fa-satellite-dish feature-icon"></i> <!-- Satellite Tracking -->
+          <h5 class="feature-title">SATELLITE TRACKING</h5>
+        </div>
+        <div class="content-container">
+          <p class="feature-description">Stay connected with assets in the most remote areas with our satellite tracking capabilities, independent of cellular networks.</p>
+        </div>
+      </div>
+  
+      <!-- New Product Feature 5 -->
+      <div class="feature-box">
+        <div class="icon-container">
+          <i class="fas fa-wifi feature-icon"></i> <!-- IoT Integration -->
+          <h5 class="feature-title">IOT INTEGRATION</h5>
+        </div>
+        <div class="content-container">
+          <p class="feature-description">Leverage IoT technology for smarter asset management with sensors that provide environmental and usage data in real-time.</p>
+        </div>
+      </div>
+  
+      <!-- New Product Feature 6 -->
+      <div class="feature-box">
+        <div class="icon-container">
+          <i class="fas fa-broadcast-tower feature-icon"></i> <!-- Custom Solutions -->
+          <h5 class="feature-title">CUSTOM SOLUTIONS</h5>
+        </div>
+        <div class="content-container">
+          <p class="feature-description">Get custom-built solutions designed to meet the unique needs of your business, from bespoke tracking devices to specialized software.</p>
+        </div>
+      </div>
+    <!-- Add more feature boxes as needed -->
+  </div>
+</div>
+
+ </section>
+
+ 
+<section class="benefits-section" id="benefit">
+  <div class="container">
+    <h2 class="section-title text-center">Benefits of GPS Fleet Tracking</h2>
+    <div class="row">
+      <!-- Benefit 1 -->
+      <div class="col-md-3 text-center">
+        <div class="benefit">
+          <div class="percentage" id="benefit1">0%</div>
+          <p class="benefit-description">Reduction in Fuel Costs</p>
+        </div>
+      </div>
+      <!-- Benefit 2 -->
+      <div class="col-md-3 text-center">
+        <div class="benefit">
+          <div class="percentage" id="benefit2">0%</div>
+          <p class="benefit-description">Increase in Productivity</p>
+        </div>
+      </div>
+      <!-- Benefit 3 -->
+      <div class="col-md-3 text-center">
+        <div class="benefit">
+          <div class="percentage" id="benefit3">0%</div>
+          <p class="benefit-description">Decrease in Overtime Claims</p>
+        </div>
+      </div>
+      <!-- Benefit 4 -->
+      <div class="col-md-3 text-center">
+        <div class="benefit">
+          <div class="percentage" id="benefit4">0%</div>
+          <p class="benefit-description">Improvement in Fleet Safety</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <div class="mb-5 mt-5 pb-5 " >
+  <h2 class="section-title  text-center" >DOWNLOAD</h2>
+
+ <section class="download-section" id="download">
+  <div class="container text-center">
+    <!-- <h2>Download Our App</h2> -->
+    <p>Available on iOS and Android.</p>
+    <div class="download-buttons">
+      <a href="#" class="btn download-btn ios-btn"> <i class="fab fa-apple"></i> iOS</a>
+      <a href="#" class="btn download-btn android-btn"> <i class="fab fa-android"></i> Android</a>
+    </div>
+  </div>
+</section>
+</div>
+
+
+<section class="testimonial-section py-5" id="clients">
+  <div class="container">
+    <div class="mb-5 mt-5">
+    <h2 class="section-title text-center mb-5" >What Our Clients Say</h2>
+    <p class=" text-center txt pb-4">Hear from our satisfied clients who have experienced the reliability and efficiency of our GPS tracking solutions firsthand</p>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial">
+            <div class="client-image">
+              <img src="../static/assets/img/clients/dark.jpg" alt="Client 1" />
+            </div>
+            <p class="testimonial-content">"GPS Tech Solutions revolutionized our fleet management. The real-time tracking and detailed reports have significantly improved our operations and reduced costs."</p>
+            <h3 class="client-name">- Alexia Johnson, Transport Manager</h3>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="testimonial">
+            <div class="client-image">
+              <img src="../static/assets/img/clients/p3.jpg" alt="Client 2" />
+            </div>
+            <p class="testimonial-content">"The geofencing feature is a game-changer. It has enhanced the security of our assets beyond expectations. Highly recommend their service!"</p>
+            <h3 class="client-name">- Jacob Davison, Logistics Coordinator</h3>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial">
+            <div class="client-image">
+              <img src="../static/assets/img/clients/p1.jpg" alt="Client 1" />
+            </div>
+            <p class="testimonial-content">"Their customer support is outstanding. Any queries or issues are promptly addressed, making their service reliable and user-friendly."</p>
+            <h3 class="client-name">- Michelle Brown, Business Owner</h3>
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination mt-5 pt-5"></div>
+    </div>
+  </div>
+</section>
+
+<section class="partner-logos mb-5 pb-5" id="partners">
+  <div class="container pl-5 pr-5">
+    <div class="mb-5 mt-5">
+    <h2 class="text-center section-title" >Partners</h2>
+    </div>
+    
+  <div class="swiper-container ">
+    <div class="swiper-wrapper ">
+    
+      <!-- Slide -->
+      <div class="swiper-slide"><img src="../static/assets/img/logo/g-logo.png" alt="Google Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/n-logo.png" alt="Nike Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/MTN-Logo.png" alt="MTN Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/Meta-Logo.png" alt="Meta Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/g-logo.png" alt="Google Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/n-logo.png" alt="Nike Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/MTN-Logo.png" alt="MTN Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/Meta-Logo.png" alt="Meta Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/g-logo.png" alt="Google Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/n-logo.png" alt="Nike Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/MTN-Logo.png" alt="MTN Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/Meta-Logo.png" alt="Meta Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/g-logo.png" alt="Google Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/n-logo.png" alt="Nike Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/MTN-Logo.png" alt="MTN Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/Meta-Logo.png" alt="Meta Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/g-logo.png" alt="Google Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/n-logo.png" alt="Nike Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/MTN-Logo.png" alt="MTN Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/Meta-Logo.png" alt="Meta Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/g-logo.png" alt="Google Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/n-logo.png" alt="Nike Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/MTN-Logo.png" alt="MTN Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/Meta-Logo.png" alt="Meta Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/g-logo.png" alt="Google Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/n-logo.png" alt="Nike Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/MTN-Logo.png" alt="MTN Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/Meta-Logo.png" alt="Meta Logo"></div>   
+      <div class="swiper-slide"><img src="../static/assets/img/logo/g-logo.png" alt="Google Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/n-logo.png" alt="Nike Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/MTN-Logo.png" alt="MTN Logo"></div>
+      <div class="swiper-slide"><img src="../static/assets/img/logo/Meta-Logo.png" alt="Meta Logo"></div>
+      <!-- ... add more slides as needed -->
+    </div>
+    
+  </div>
+
+  </div>
+</section>
+
+
+<section class="contact-section py-4" id="contact">
+  <div class="container">
+    <div class="mb-5 mt-5">
+    <h2 class="text-center mb-5 section-title" >Contact</h2>
+    </div>
+    <div class="row">
+          <!-- Contact Info -->
+          <div class="contact-info col-md-4 mb-4">
+            <p><i class="fas fa-phone-alt me-2"></i><strong>Phone:</strong> +234090480229</p>
+          </div>
+          <div class="contact-info col-md-4 mb-4">
+            <p><i class="fas fa-envelope me-2"></i><strong>Email:</strong> info@mail.com</p>
+          </div>
+          <div class="contact-info col-md-4 mb-4">
+            <p><i class="fas fa-map-marker-alt me-2"></i><strong>Address:</strong> Lekki Phase One, Lagos, Nigeria</p>
+          </div>
+      <div class="col-12 mb-4">
+        <div class="map-container">
+          <!-- Google Maps Embed -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31716.498246616276!2d3.4504166557681026!3d6.45019813662744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf452da3bd44b%3A0x47331fb41adc9d28!2sLekki%20Phase%201%2C%20Lekki%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1708218232094!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="col-12">
+        <!-- Contact Form -->
+        <form id="contactForm" novalidate>
+          <div class="row">
+
+            <div class="col-md-4 mb-3">
+              <input type="text" class="form-control" id="firstName" placeholder="First Name*" required>
+            </div>
+            <div class="col-md-4 mb-3">
+              <input type="text" class="form-control" id="lastName" placeholder="Last Name*" required>
+            </div>
+            <div class="col-md-4 mb-3">
+              <input type="email" class="form-control" id="email" placeholder="Email*" required>
+            </div>
+            <div class="col-md-4 mb-3">
+              <input type="tel" class="form-control" id="phone" placeholder="Phone No*" required>
+            </div>
+            <div class="col-md-4 mb-3">
+              <select class="form-select" id="country" required>
+                <option value="">Country*</option>
+                <option value="usa">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="canada">Canada</option>
+                <option value="nigeria">Nigeria</option>
+                <option value="australia">Australia</option>
+                <!-- Country options -->
+              </select>
+            </div>
+            <div class="col-md-4 mb-3">
+              <select class="form-select" id="subject" required>
+                <option value="">Select Subject*</option>
+                <option value="general_inquiry">General Inquiry</option>
+                <option value="technical_support">Technical Support</option>
+                <option value="sales_inquiry">Sales Inquiry</option>
+                <option value="product_feedback">Product Feedback</option>
+                <option value="partnership_opportunity">Partnership Opportunity</option>
+                <!-- Subject options -->
+              </select>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%endblock content%}
